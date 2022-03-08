@@ -30,6 +30,10 @@ func _process(delta):
 		var bulletInstance = bulletSource.instance()
 		bulletInstance.position = Vector2(position.x-50, position.y)
 		get_tree().get_root().add_child(bulletInstance)
+	if Input.is_action_pressed("rapid_fire"):
+		var bulletInstance = bulletSource.instance()
+		bulletInstance.position = Vector2(position.x-50, position.y)
+		get_tree().get_root().add_child(bulletInstance)
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 #func _process(delta):

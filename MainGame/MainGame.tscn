@@ -20,7 +20,7 @@ script = ExtResource( 4 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
-countdownMax = 25
+countdownMax = 200
 
 [node name="HUD" type="HBoxContainer" parent="."]
 margin_right = 40.0
@@ -43,22 +43,18 @@ margin_right = 55.0
 margin_bottom = 27.0
 text = "Score: 0"
 
-[node name="Border_Left" type="Area2D" parent="." groups=[
-"left",
-]]
-position = Vector2( -1.53629, 369.479 )
+[node name="Border_Left" type="KinematicBody2D" parent="."]
+position = Vector2( 646.934, -31.955 )
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Border_Left"]
-position = Vector2( -5.37704, -0.768158 )
+[node name="Border_Left" type="CollisionShape2D" parent="Border_Left"]
+position = Vector2( -653.847, 400.666 )
 shape = SubResource( 1 )
 
-[node name="Border_Right" type="Area2D" parent="." groups=[
-"right",
-]]
-position = Vector2( 1287.42, 368.711 )
+[node name="Border_Right" type="KinematicBody2D" parent="."]
+position = Vector2( 646.934, -31.955 )
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Border_Right"]
-position = Vector2( -5.37704, -0.768158 )
+[node name="Border_Right" type="CollisionShape2D" parent="Border_Right"]
+position = Vector2( 635.109, 399.898 )
 shape = SubResource( 1 )
 
 [node name="Player" parent="." instance=ExtResource( 2 )]
@@ -69,7 +65,7 @@ position = Vector2( 1206.77, 352.768 )
 ]]
 position = Vector2( 646.934, -31.955 )
 
-[node name="TopCollider" type="CollisionShape2D" parent="Border_Top" groups=[
+[node name="Border_Top" type="CollisionShape2D" parent="Border_Top" groups=[
 "top",
 ]]
 position = Vector2( 0, 1 )

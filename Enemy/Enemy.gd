@@ -20,8 +20,6 @@ func _physics_process(delta):
 			collidedObject.get_collider().queue_free()
 			queue_free()
 			get_tree().change_scene("res://UI/Died/Died.tscn")
-		else:
-			queue_free()
 	
 	
 
