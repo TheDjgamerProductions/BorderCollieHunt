@@ -1,0 +1,15 @@
+[gd_scene format=2]
+
+[node name="Control" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="."]
+margin_left = 614.489
+margin_top = 259.953
+margin_right = 655.489
+margin_bottom = 273.953
+text = "Time!"
