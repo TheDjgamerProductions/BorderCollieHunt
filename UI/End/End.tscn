@@ -1,15 +1,36 @@
-[gd_scene format=2]
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://UI/End/Button.gd" type="Script" id=1]
 
 [node name="Control" type="Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
+margin_left = 1.22772
+margin_top = -1.22775
+margin_right = 1.22778
+margin_bottom = -1.22778
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="Label" type="Label" parent="."]
-margin_left = 614.489
-margin_top = 259.953
-margin_right = 655.489
-margin_bottom = 273.953
+margin_left = 632.905
+margin_top = 251.359
+margin_right = 673.905
+margin_bottom = 265.359
 text = "Time!"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button" type="Button" parent="."]
+margin_left = 599.339
+margin_top = 272.321
+margin_right = 729.339
+margin_bottom = 321.321
+text = "Retry"
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+[connection signal="pressed" from="Button" to="Button" method="_on_Button_pressed"]

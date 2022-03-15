@@ -10,6 +10,9 @@ func _physics_process(delta):
 	if (get_tree().get_current_scene().get_name() != "MainGame"):
 		queue_free()
 	var collidedObject = move_and_collide(Vector2(-speed*delta, 0))
+	if (position.x <= -600):
+		print("Delete Bullet")
+		queue_free()
 	if (collidedObject):
 		print(collidedObject.collider.name)
 		if ("Enemy" in collidedObject.collider.name):
@@ -17,7 +20,4 @@ func _physics_process(delta):
 			GlobalVariables.scoringInformation["currentScore"] = GlobalVariables.scoringInformation["currentScore"] + 5
 			Score.text = ("Score: " + str(GlobalVariables.scoringInformation["currentScore"]))
 			queue_free()
-		elif ("Border" in collidedObject.collider.name):
-			queue_free()
-			print("Hit Border")
-		
+

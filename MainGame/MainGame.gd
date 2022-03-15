@@ -11,8 +11,15 @@ func _ready():
 		yield(get_tree().create_timer(1.0), "timeout")
 		currentTimer = currentTimer - 1 
 		
-	get_tree().change_scene("res://UI/End/End.tscn")
+	if GlobalVariables.scoringInformation["highScore"] < GlobalVariables.scoringInformation["currentScore"]:
+		GlobalVariables.scoringInformation["highScore"] = GlobalVariables.scoringInformation["currentScore"]
 	currentTimer = countdownMax
+	GlobalVariables.prevScores.push_back(GlobalVariables.scoringInformation["currentScore"])
+	print(GlobalVariables.prevScores)
+	GlobalVariables.scoringInformation["currentScore"] = 0
+	
+	get_tree().change_scene("res://UI/End/End.tscn")
+
 func _process(delta):
 	pass
 	
