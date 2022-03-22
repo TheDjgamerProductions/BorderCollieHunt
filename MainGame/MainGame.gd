@@ -14,7 +14,11 @@ func _ready():
 	if GlobalVariables.scoringInformation["highScore"] < GlobalVariables.scoringInformation["currentScore"]:
 		GlobalVariables.scoringInformation["highScore"] = GlobalVariables.scoringInformation["currentScore"]
 	currentTimer = countdownMax
-	GlobalVariables.prevScores.push_back(GlobalVariables.scoringInformation["currentScore"])
+	if GlobalVariables.prevScores.size() < 5:
+		GlobalVariables.prevScores.push_front(GlobalVariables.scoringInformation["currentScore"])
+	else:
+		GlobalVariables.prevScores.remove(4)
+		GlobalVariables.prevScores.push_front(GlobalVariables.scoringInformation["currentScore"])
 	print(GlobalVariables.prevScores)
 	GlobalVariables.scoringInformation["currentScore"] = 0
 	
