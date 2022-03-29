@@ -17,7 +17,7 @@ func _ready():
 
 
 func _physics_process(delta):
-	if Input.is_action_pressed("ui_up"): 
+	if Input.is_action_pressed("ui_up"):
 		move_and_collide(Vector2(0, -movement_speed * delta))
 	if Input.is_action_pressed("ui_down"):
 		move_and_collide(Vector2(0, movement_speed * delta))		
