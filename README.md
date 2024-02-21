@@ -1,3 +1,11 @@
+# About
+Made for my Year 11 Interactive Software Development Class, this repo was made for the Second Assignment where I made a tutorial on how to make a basic game in Godot.
+
+This repo contains the final project files from the tutorial
+
+
+
+# ORGINAL README
 # Border Collie Hunt
 ## Purpose
 
